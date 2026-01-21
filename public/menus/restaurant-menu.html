@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marina Restaurant Menu</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #fafaf9;
+            color: #1a1a1a;
+            width: 210mm;
+            height: 297mm;
+            padding: 20mm;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            background-image: url('../images/marina-logo.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            opacity: 0.05;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #d4af37;
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: 900;
+            letter-spacing: 8px;
+            color: #1a1a1a;
+        }
+
+        .tagline {
+            font-size: 12px;
+            letter-spacing: 6px;
+            color: #d4af37;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        .buffet-box {
+            background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            margin: 30px 0;
+            border: 4px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .buffet-box h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+
+        .buffet-box .price {
+            font-size: 36px;
+            font-weight: 900;
+            margin-top: 10px;
+        }
+
+        .section {
+            margin: 25px 0;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 900;
+            color: #1a1a1a;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 12px 0;
+            padding: 8px 0;
+            border-bottom: 1px dotted #e7e5e4;
+        }
+
+        .menu-item-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid #d4af37;
+            flex-shrink: 0;
+        }
+
+        .menu-item-content {
+            flex: 1;
+        }
+
+        .menu-item-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .item-name {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .item-desc {
+            font-size: 11px;
+            color: #666;
+            font-style: italic;
+            margin-top: 3px;
+        }
+
+        .item-price {
+            font-weight: 900;
+            font-size: 14px;
+            color: #d4af37;
+        }
+
+        .signature {
+            color: #d4af37;
+            margin-left: 5px;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #d4af37;
+            font-size: 10px;
+            color: #666;
+        }
+
+        .watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.03;
+            font-size: 200px;
+            font-weight: 900;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="header">
+            <div class="logo">THE MARINA</div>
+            <div class="tagline">Global Flavors, Local Soul</div>
+        </div>
+
+        <div class="buffet-box">
+            <h2>THE GRAND MARINA BUFFET</h2>
+            <p style="font-size: 13px; margin: 10px 0;">Unlimited exploration of Hyderabadi spices and Local Zimbabwean
+                Heritage</p>
+            <div class="price">$25</div>
+            <p style="font-size: 11px; margin-top: 5px;">PER PERSON</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Chef's Signatures</div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&h=200&fit=crop"
+                    alt="Biryani" class="menu-item-image">
+                <div class="menu-item-content">
+                    <div class="menu-item-details">
+                        <div>
+                            <div class="item-name">Hyderabadi Dum Biryani <span class="signature">★</span></div>
+                            <div class="item-desc">Slow-cooked basmati rice, aromatic spices, sealed in a clay pot</div>
+                        </div>
+                        <div class="item-price">$18</div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&h=200&fit=crop" alt="Curry"
+                    class="menu-item-image">
+                <div class="menu-item-content">
+                    <div class="menu-item-details">
+                        <div>
+                            <div class="item-name">Mirchi Ka Salan <span class="signature">★</span></div>
+                            <div class="item-desc">Fiery green chilies in tangy peanut and sesame gravy</div>
+                        </div>
+                        <div class="item-price">$14</div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=200&h=200&fit=crop"
+                    alt="Haleem" class="menu-item-image">
+                <div class="menu-item-content">
+                    <div class="menu-item-details">
+                        <div>
+                            <div class="item-name">Haleem <span class="signature">★</span></div>
+                            <div class="item-desc">Slow-cooked wheat, lentils, and tender meat blend</div>
+                        </div>
+                        <div class="item-price">$16</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="two-column">
+            <div class="section">
+                <div class="section-title">The Wok</div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=200&h=200&fit=crop"
+                        alt="Kung Pao" class="menu-item-image">
+                    <div class="menu-item-content">
+                        <div class="menu-item-details">
+                            <div>
+                                <div class="item-name">Kung Pao Chicken</div>
+                                <div class="item-desc">Spicy stir-fry with peanuts</div>
+                            </div>
+                            <div class="item-price">$15</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1576777647209-e8733d7b851b?w=200&h=200&fit=crop"
+                        alt="Sweet Sour" class="menu-item-image">
+                    <div class="menu-item-content">
+                        <div class="menu-item-details">
+                            <div>
+                                <div class="item-name">Sweet & Sour Pork</div>
+                                <div class="item-desc">Crispy pork in tangy sauce</div>
+                            </div>
+                            <div class="item-price">$16</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=200&h=200&fit=crop"
+                        alt="Noodles" class="menu-item-image">
+                    <div class="menu-item-content">
+                        <div class="menu-item-details">
+                            <div>
+                                <div class="item-name">Singapore Chow Mein</div>
+                                <div class="item-desc">Curry-spiced noodles</div>
+                            </div>
+                            <div class="item-price">$14</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">The Grill</div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=200&h=200&fit=crop"
+                        alt="Steak" class="menu-item-image">
+                    <div class="menu-item-content">
+                        <div class="menu-item-details">
+                            <div>
+                                <div class="item-name">NY Strip Steak</div>
+                                <div class="item-desc">12oz prime cut, herb butter</div>
+                            </div>
+                            <div class="item-price">$28</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200&h=200&fit=crop"
+                        alt="Burger" class="menu-item-image">
+                    <div class="menu-item-content">
+                        <div class="menu-item-details">
+                            <div>
+                                <div class="item-name">Marina Burger</div>
+                                <div class="item-desc">Wagyu beef, aged cheddar</div>
+                            </div>
+                            <div class="item-price">$18</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=200&h=200&fit=crop" alt="Ribs"
+                        class="menu-item-image">
+                    <div class="menu-item-content">
+                        <div class="menu-item-details">
+                            <div>
+                                <div class="item-name">BBQ Ribs</div>
+                                <div class="item-desc">Fall-off-the-bone tender</div>
+                            </div>
+                            <div class="item-price">$22</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="background: #1a1a1a; color: white; padding: 20px; margin-top: 20px;">
+            <div class="section-title" style="color: #d4af37; border-color: #d4af37;">Zimbabwean Heritage</div>
+            <div style="font-size: 11px; font-style: italic; color: #999; margin-bottom: 15px;">Our Foundation, Our
+                Roots</div>
+            <div class="two-column">
+                <div class="menu-item" style="border-color: #333;">
+                    <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=200&h=200&fit=crop"
+                        alt="Sadza" class="menu-item-image">
+                    <div class="menu-item-content">
+                        <div class="menu-item-details">
+                            <div>
+                                <div class="item-name" style="color: white;">Sadza & Stew</div>
+                                <div class="item-desc" style="color: #999;">Traditional maize meal with oxtail</div>
+                            </div>
+                            <div class="item-price">$12</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item" style="border-color: #333;">
+                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=200&h=200&fit=crop"
+                        alt="Fish" class="menu-item-image">
+                    <div class="menu-item-content">
+                        <div class="menu-item-details">
+                            <div>
+                                <div class="item-name" style="color: white;">Flame-Grilled Bream</div>
+                                <div class="item-desc" style="color: #999;">Fresh from Lake Kariba</div>
+                            </div>
+                            <div class="item-price">$16</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>MARINA CONVENTION CENTER & CASINO</p>
+            <p>Locheng Plaza, Mutley Bend, Harare, Zimbabwe</p>
+            <p style="margin-top: 10px;">+263 788 839 065 | mkanakabailey@gmail.com</p>
+        </div>
+    </div>
+</body>
+
+</html>

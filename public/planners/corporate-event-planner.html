@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marina Convention Center - Corporate Event Planner</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #D4AF37;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #D4AF37;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+        }
+        
+        h1 {
+            color: #D4AF37;
+            font-size: 28px;
+            margin-top: 30px;
+            border-bottom: 2px solid #f5f5f0;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #1a1a1a;
+            font-size: 22px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        h3 {
+            color: #D4AF37;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .checklist {
+            background: #f5f5f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 12px 0;
+            padding: 8px;
+            background: white;
+            border-radius: 4px;
+        }
+        
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #D4AF37;
+            border-radius: 4px;
+            margin-right: 12px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .venue-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .venue-box {
+            background: #f5f5f0;
+            padding: 15px;
+            border-radius: 8px;
+            border-top: 3px solid #D4AF37;
+        }
+        
+        .venue-name {
+            font-weight: bold;
+            color: #D4AF37;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .contact-box {
+            background: #D4AF37;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .contact-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background: #D4AF37;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:hover {
+            background: #f5f5f0;
+        }
+        
+        .notes-section {
+            border: 2px solid #D4AF37;
+            padding: 20px;
+            margin: 20px 0;
+            min-height: 150px;
+            border-radius: 8px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #D4AF37;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">MARINA</div>
+        <div class="subtitle">Convention Center & Casino</div>
+        <p style="margin-top: 15px; font-size: 24px; color: #D4AF37;">Corporate Event Planner</p>
+    </div>
+
+    <h1>Professional Event Planning Made Simple</h1>
+    <p>Welcome to Marina Convention Center, your premier destination for corporate events. This comprehensive planner will help you organize a successful conference, meeting, or corporate gathering.</p>
+
+    <div class="contact-box">
+        <h3>Your Event Coordinator</h3>
+        <p><strong>Email:</strong> events@marinaconvention.com</p>
+        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+        <p><strong>Hours:</strong> Monday - Friday, 8 AM - 6 PM</p>
+    </div>
+
+
+    <h1>Venue Options & Capacities</h1>
+    <div class="venue-grid">
+        <div class="venue-box">
+            <div class="venue-name">Grand Ballroom</div>
+            <div><strong>Theater:</strong> 800 people</div>
+            <div><strong>Banquet:</strong> 500 people</div>
+            <div><strong>Classroom:</strong> 400 people</div>
+            <div><strong>Size:</strong> 10,000 sq ft</div>
+            <div><strong>Features:</strong> Built-in AV, stage, dance floor</div>
+        </div>
+        
+        <div class="venue-box">
+            <div class="venue-name">Executive Boardroom</div>
+            <div><strong>Boardroom:</strong> 24 people</div>
+            <div><strong>Size:</strong> 800 sq ft</div>
+            <div><strong>Features:</strong> Video conferencing, whiteboard, premium furnishings</div>
+        </div>
+        
+        <div class="venue-box">
+            <div class="venue-name">Conference Hall A</div>
+            <div><strong>Theater:</strong> 300 people</div>
+            <div><strong>Banquet:</strong> 200 people</div>
+            <div><strong>Classroom:</strong> 150 people</div>
+            <div><strong>Size:</strong> 4,000 sq ft</div>
+            <div><strong>Features:</strong> Divisible space, natural light</div>
+        </div>
+        
+        <div class="venue-box">
+            <div class="venue-name">Conference Hall B</div>
+            <div><strong>Theater:</strong> 300 people</div>
+            <div><strong>Banquet:</strong> 200 people</div>
+            <div><strong>Classroom:</strong> 150 people</div>
+            <div><strong>Size:</strong> 4,000 sq ft</div>
+            <div><strong>Features:</strong> Divisible space, natural light</div>
+        </div>
+        
+        <div class="venue-box">
+            <div class="venue-name">Marina Terrace</div>
+            <div><strong>Reception:</strong> 250 people</div>
+            <div><strong>Size:</strong> 3,000 sq ft</div>
+            <div><strong>Features:</strong> Outdoor space, marina views, covered area</div>
+        </div>
+        
+        <div class="venue-box">
+            <div class="venue-name">Breakout Rooms (6)</div>
+            <div><strong>Each Room:</strong> 30-50 people</div>
+            <div><strong>Size:</strong> 600-800 sq ft each</div>
+            <div><strong>Features:</strong> AV equipment, flexible setup</div>
+        </div>
+    </div>
+
+
+    <h1>Event Planning Timeline</h1>
+    <table>
+        <tr>
+            <th>Timeline</th>
+            <th>Action Items</th>
+        </tr>
+        <tr>
+            <td><strong>6-12 Months Before</strong></td>
+            <td>
+                • Determine event goals and objectives<br>
+                • Set budget and secure funding<br>
+                • Book venue at Marina Convention Center<br>
+                • Form planning committee
+            </td>
+        </tr>
+        <tr>
+            <td><strong>4-6 Months Before</strong></td>
+            <td>
+                • Finalize event agenda and schedule<br>
+                • Book keynote speakers and presenters<br>
+                • Arrange catering and menu selections<br>
+                • Design marketing materials
+            </td>
+        </tr>
+        <tr>
+            <td><strong>2-3 Months Before</strong></td>
+            <td>
+                • Launch registration and ticket sales<br>
+                • Confirm AV and technology requirements<br>
+                • Book hotel room blocks<br>
+                • Order signage and branded materials
+            </td>
+        </tr>
+        <tr>
+            <td><strong>1 Month Before</strong></td>
+            <td>
+                • Finalize floor plans and seating<br>
+                • Confirm all vendor contracts<br>
+                • Create attendee badges and materials<br>
+                • Send reminder communications
+            </td>
+        </tr>
+        <tr>
+            <td><strong>1-2 Weeks Before</strong></td>
+            <td>
+                • Provide final headcount to venue<br>
+                • Conduct site walkthrough<br>
+                • Prepare staff and volunteer schedules<br>
+                • Test all technology and AV equipment
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Day Before</strong></td>
+            <td>
+                • Set up registration area<br>
+                • Deliver materials to venue<br>
+                • Brief all staff and volunteers<br>
+                • Final venue walkthrough
+            </td>
+        </tr>
+    </table>
+
+
+    <div class="page-break"></div>
+
+    <h1>Event Day Checklist</h1>
+    <div class="checklist">
+        <h3>Setup & Logistics</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Arrive early for venue access and setup</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Set up registration desk with materials</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Test all AV equipment and microphones</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Place directional signage throughout venue</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Verify catering setup and timing</div>
+        </div>
+        
+        <h3>Technology & AV</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Test presentation equipment and screens</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Verify WiFi connectivity and passwords</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Check video conferencing setup (if hybrid event)</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Test lighting and sound levels</div>
+        </div>
+        
+        <h3>Attendee Experience</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Prepare welcome packets and badges</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Stock refreshment stations</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Brief registration staff on procedures</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Verify coat check and parking arrangements</div>
+        </div>
+        
+        <h3>During Event</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Monitor registration and attendance</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Coordinate speaker transitions</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Manage Q&A sessions</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Address any issues promptly</div>
+        </div>
+        
+        <h3>Post-Event</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Collect feedback from attendees</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Retrieve all company materials</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Thank speakers and vendors</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Conduct debrief with planning team</div>
+        </div>
+    </div>
+
+
+    <h1>Catering & F&B Options</h1>
+    <h2>Meeting Packages</h2>
+    <div class="checklist">
+        <h3>Continental Breakfast</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Fresh pastries, muffins, and bagels</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Seasonal fruit display</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Coffee, tea, and juice service</div>
+        </div>
+        
+        <h3>Coffee Break Service</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Premium coffee and tea selection</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Assorted cookies and brownies</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Fresh fruit and granola bars</div>
+        </div>
+        
+        <h3>Plated Lunch Options</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Choice of 3 entrées (chicken, fish, vegetarian)</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Garden salad and bread service</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Dessert and beverage</div>
+        </div>
+        
+        <h3>Buffet Lunch</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Multiple entrée selections</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Salad bar and sides</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Dessert station</div>
+        </div>
+        
+        <h3>Reception Package</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Passed hors d'oeuvres (select 6-8)</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Stationary displays</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Open bar service</div>
+        </div>
+    </div>
+
+
+    <h1>Technology & AV Services</h1>
+    <div class="checklist">
+        <h3>Standard Equipment (Included)</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Wireless microphones (handheld and lavalier)</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>LCD projectors and screens</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>High-speed WiFi throughout venue</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Basic sound system</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Podium with reading light</div>
+        </div>
+        
+        <h3>Premium Upgrades (Additional Cost)</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>LED video walls and large format displays</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Professional lighting design</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Live streaming and recording services</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Video conferencing for hybrid events</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>On-site AV technician</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Simultaneous interpretation equipment</div>
+        </div>
+    </div>
+
+    <h1>Budget Worksheet</h1>
+    <div class="notes-section">
+        <p><strong>Venue Rental:</strong> $____________</p>
+        <p><strong>Catering (per person × attendee count):</strong> $____________</p>
+        <p><strong>AV Equipment & Services:</strong> $____________</p>
+        <p><strong>Décor & Signage:</strong> $____________</p>
+        <p><strong>Marketing & Printing:</strong> $____________</p>
+        <p><strong>Speaker Fees & Travel:</strong> $____________</p>
+        <p><strong>Entertainment:</strong> $____________</p>
+        <p><strong>Staff & Security:</strong> $____________</p>
+        <p><strong>Miscellaneous:</strong> $____________</p>
+        <p style="border-top: 2px solid #D4AF37; margin-top: 15px; padding-top: 10px;"><strong>TOTAL BUDGET:</strong> $____________</p>
+    </div>
+
+    <h1>Event Details</h1>
+    <div class="notes-section">
+        <p><strong>Event Name:</strong> _________________________________</p>
+        <p><strong>Event Date:</strong> _________________________________</p>
+        <p><strong>Expected Attendance:</strong> _________________________________</p>
+        <p><strong>Event Type:</strong> _________________________________</p>
+        <p><strong>Primary Contact:</strong> _________________________________</p>
+        <p><strong>Email:</strong> _________________________________</p>
+        <p><strong>Phone:</strong> _________________________________</p>
+    </div>
+
+    <h1>Notes & Special Requests</h1>
+    <div class="notes-section" style="min-height: 300px;">
+        <p style="color: #999; font-style: italic;">Use this space for additional notes, special requirements, or questions...</p>
+    </div>
+
+    <div class="footer">
+        <p><strong>Marina Convention Center & Casino</strong></p>
+        <p>123 Marina Boulevard | City, State 12345</p>
+        <p>events@marinaconvention.com | +1 (555) 123-4567</p>
+        <p style="margin-top: 15px; font-style: italic;">Your success is our priority. Let's create an exceptional event together!</p>
+    </div>
+</body>
+</html>

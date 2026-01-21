@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const NAV_ITEMS = [
   { id: 'home', label: 'Home', img: '/images/edited-photo.png', desc: 'Welcome' },
@@ -26,9 +27,9 @@ export default function Navigation({ activeSection, setActiveSection, mobileMenu
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center space-x-2 cursor-pointer" onClick={() => setActiveSection('home')}>
               <div className="relative w-12 h-12 animate-sway">
-                <img 
-                  src="/images/marina-logo.png" 
-                  alt="Marina Logo" 
+                <img
+                  src="/images/marina-logo.png"
+                  alt="Marina Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -42,36 +43,48 @@ export default function Navigation({ activeSection, setActiveSection, mobileMenu
             </button>
           </div>
         </div>
-        
       </nav>
 
       {/* Sidebar Overlay - All Screen Sizes */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-0 top-20 z-[60]">
-          {/* Backdrop */}
-          <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
-          ></div>
-          
-          {/* Sliding Sidebar */}
-          <div className="absolute top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-white shadow-2xl overflow-y-auto scrollbar-hide animate-slide-in">
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <div className="fixed inset-0 top-20 z-[60]">
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+              onClick={() => setMobileMenuOpen(false)}
+            ></motion.div>
+
+            {/* Sliding Sidebar */}
+            <motion.div
+              initial={{ x: '-100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '-100%' }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="absolute top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-white shadow-2xl overflow-y-auto scrollbar-hide"
+            >
               {/* Logo in Sidebar */}
               <div className="p-6 border-b border-[#d4af37] bg-[#fafaf9] flex justify-center">
                 <div className="relative w-20 h-20 animate-sway">
-                  <img 
-                    src="/images/marina-logo.png" 
-                    alt="Marina Logo" 
+                  <img
+                    src="/images/marina-logo.png"
+                    alt="Marina Logo"
                     className="w-full h-full object-contain"
                   />
                 </div>
               </div>
-              
+
               {/* Menu Items */}
               <div className="flex flex-col">
-                {NAV_ITEMS.map((item) => (
-                  <button
+                {NAV_ITEMS.map((item, idx) => (
+                  <motion.button
                     key={item.id}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.1 }}
                     onClick={() => {
                       setActiveSection(item.id);
                       setMobileMenuOpen(false);
@@ -85,18 +98,50 @@ export default function Navigation({ activeSection, setActiveSection, mobileMenu
                       <span className={`block text-xl font-black uppercase tracking-widest drop-shadow-md transition-colors duration-300 ${activeSection === item.id ? 'text-white' : 'text-white'}`}>{item.label}</span>
                       <span className="text-[9px] uppercase tracking-[0.3em] text-[#d4af37] mt-1">{item.desc}</span>
                     </div>
-                    {activeSection === item.id && <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#d4af37]"></div>}
-                  </button>
+                    {activeSection === item.id && <motion.div layoutId="activeIndicator" className="absolute left-0 top-0 bottom-0 w-1 bg-[#d4af37]"></motion.div>}
+                  </motion.button>
                 ))}
               </div>
-              
+
               {/* Footer */}
               <div className="p-4 bg-[#fafaf9] border-t border-[#e7e5e4] text-center">
                 <p className="text-[10px] text-zinc-500 uppercase tracking-widest">Locheng Plaza</p>
               </div>
+            </motion.div>
           </div>
+        )}
+      </AnimatePresence>
+
+      {/* Sticky Quick Action Button - Mobile Only */}
+      <motion.button
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={() => setActiveSection('contact')}
+        className="fixed bottom-24 right-6 z-[80] bg-[#d4af37] text-white p-4 rounded-full shadow-2xl sm:hidden flex items-center justify-center"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14m-7-7 7 7-7 7" /></svg>
+      </motion.button>
+      {/* Bottom Navigation - Mobile Only */}
+      <nav className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-[#d4af37] z-[70] sm:hidden pb-safe">
+        <div className="flex justify-around items-center h-16">
+          {NAV_ITEMS.slice(0, 3).map((item) => (
+            <button
+              key={item.id}
+              onClick={() => setActiveSection(item.id)}
+              className={`flex flex-col items-center justify-center w-full h-full transition-colors ${activeSection === item.id ? 'text-[#d4af37]' : 'text-zinc-500'}`}
+            >
+              <span className="text-[10px] font-black uppercase tracking-tighter">{item.label}</span>
+            </button>
+          ))}
+          <button
+            onClick={() => setActiveSection('contact')}
+            className="flex flex-col items-center justify-center w-full h-full bg-[#d4af37] text-white"
+          >
+            <span className="text-[10px] font-black uppercase tracking-tighter">Book Now</span>
+          </button>
         </div>
-      )}
+      </nav>
     </>
   );
 }

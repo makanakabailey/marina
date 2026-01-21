@@ -28,6 +28,7 @@ export default function Footer() {
                 <li><a href="#" className="hover:text-[#d4af37] hover:underline decoration-[#d4af37] underline-offset-4">Specs</a></li>
                 <li><a href="#" className="hover:text-[#d4af37] hover:underline decoration-[#d4af37] underline-offset-4">Menus</a></li>
                 <li><a href="#" className="hover:text-[#d4af37] hover:underline decoration-[#d4af37] underline-offset-4">RFP</a></li>
+                <li><a href="/pitch-presentation" className="hover:text-[#d4af37] hover:underline decoration-[#d4af37] underline-offset-4">Pitch Presentation</a></li>
               </ul>
             </div>
             

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marina Convention Center - Social Event Planner</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #D4AF37;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #D4AF37;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+        }
+        
+        h1 {
+            color: #D4AF37;
+            font-size: 28px;
+            margin-top: 30px;
+            border-bottom: 2px solid #f5f5f0;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #1a1a1a;
+            font-size: 22px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        h3 {
+            color: #D4AF37;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .checklist {
+            background: #f5f5f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 12px 0;
+            padding: 8px;
+            background: white;
+            border-radius: 4px;
+        }
+        
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #D4AF37;
+            border-radius: 4px;
+            margin-right: 12px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .contact-box {
+            background: #D4AF37;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .contact-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .notes-section {
+            border: 2px solid #D4AF37;
+            padding: 20px;
+            margin: 20px 0;
+            min-height: 150px;
+            border-radius: 8px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #D4AF37;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .event-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .event-box {
+            background: #f5f5f0;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #D4AF37;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">MARINA</div>
+        <div class="subtitle">Convention Center & Casino</div>
+        <p style="margin-top: 15px; font-size: 24px; color: #D4AF37;">Social Event Planner</p>
+    </div>
+
+    <h1>Celebrate Life's Special Moments</h1>
+    <p>From milestone birthdays to anniversary celebrations, Marina Convention Center is the perfect venue for your social gatherings. This planner will help you create an unforgettable event.</p>
+
+
+    <div class="contact-box">
+        <h3>Your Event Specialist</h3>
+        <p><strong>Email:</strong> social@marinaconvention.com</p>
+        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+        <p><strong>Hours:</strong> Monday - Saturday, 9 AM - 6 PM</p>
+    </div>
+
+    <h1>Popular Social Events</h1>
+    <div class="event-grid">
+        <div class="event-box">
+            <h3>Birthday Celebrations</h3>
+            <p>Milestone birthdays (30th, 40th, 50th+), Sweet 16s, Quinceañeras</p>
+        </div>
+        
+        <div class="event-box">
+            <h3>Anniversary Parties</h3>
+            <p>Silver, Golden, Diamond anniversaries, vow renewals</p>
+        </div>
+        
+        <div class="event-box">
+            <h3>Graduation Parties</h3>
+            <p>High school, college, professional degree celebrations</p>
+        </div>
+        
+        <div class="event-box">
+            <h3>Retirement Celebrations</h3>
+            <p>Career milestone recognition and farewell parties</p>
+        </div>
+        
+        <div class="event-box">
+            <h3>Holiday Parties</h3>
+            <p>New Year's Eve, seasonal celebrations, themed events</p>
+        </div>
+        
+        <div class="event-box">
+            <h3>Reunions</h3>
+            <p>Family reunions, class reunions, military reunions</p>
+        </div>
+    </div>
+
+    <h1>6-Month Planning Timeline</h1>
+    <div class="checklist">
+        <h3>6 Months Before</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Set event date and book Marina Convention Center</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Determine budget and guest count</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Choose event theme and color scheme</div>
+        </div>
+        
+        <h3>4-5 Months Before</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Send save-the-date notices</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Book entertainment (DJ, band, or performers)</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Select menu and catering options</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Book photographer/videographer</div>
+        </div>
+        
+        <h3>2-3 Months Before</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Send formal invitations</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Order cake and desserts</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Plan décor and centerpieces</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Arrange party favors</div>
+        </div>
+        
+        <h3>1 Month Before</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Finalize guest count with venue</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Create seating chart</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Confirm all vendor details</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Plan event timeline and schedule</div>
+        </div>
+        
+        <h3>1-2 Weeks Before</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Conduct venue walkthrough</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Prepare welcome signs and displays</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Create playlist or music selections</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Finalize all payments</div>
+        </div>
+    </div>
+
+    <h1>Party Planning Checklist</h1>
+    <div class="checklist">
+        <h3>Venue & Setup</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Room layout and table arrangement</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Linens, chair covers, and table settings</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Centerpieces and floral arrangements</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Lighting design (uplighting, spotlights)</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Welcome signage and directional signs</div>
+        </div>
+        
+        <h3>Food & Beverage</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Cocktail hour appetizers</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Dinner service style (plated, buffet, stations)</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Bar package (open bar, cash bar, limited bar)</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Cake cutting and dessert service</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Late-night snacks or coffee station</div>
+        </div>
+        
+        <h3>Entertainment</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>DJ or live band</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Dance floor setup</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Photo booth or entertainment stations</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Special performances or activities</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Slideshow or video presentations</div>
+        </div>
+        
+        <h3>Guest Experience</h3>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Parking and valet service</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Coat check arrangements</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Party favors and gift bags</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Guest book or memory station</div>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <div>Transportation for guests (if needed)</div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h1>Budget Worksheet</h1>
+    <div class="notes-section">
+        <p><strong>Venue Rental:</strong> $____________</p>
+        <p><strong>Catering (per person × guest count):</strong> $____________</p>
+        <p><strong>Bar Service:</strong> $____________</p>
+        <p><strong>Cake & Desserts:</strong> $____________</p>
+        <p><strong>Entertainment (DJ/Band):</strong> $____________</p>
+        <p><strong>Photography/Videography:</strong> $____________</p>
+        <p><strong>Décor & Flowers:</strong> $____________</p>
+        <p><strong>Invitations & Printing:</strong> $____________</p>
+        <p><strong>Party Favors:</strong> $____________</p>
+        <p><strong>Miscellaneous:</strong> $____________</p>
+        <p style="border-top: 2px solid #D4AF37; margin-top: 15px; padding-top: 10px;"><strong>TOTAL BUDGET:</strong> $____________</p>
+    </div>
+
+
+    <h1>Event Details</h1>
+    <div class="notes-section">
+        <p><strong>Event Type:</strong> _________________________________</p>
+        <p><strong>Honoree/Guest of Honor:</strong> _________________________________</p>
+        <p><strong>Event Date:</strong> _________________________________</p>
+        <p><strong>Event Time:</strong> _________________________________</p>
+        <p><strong>Expected Guest Count:</strong> _________________________________</p>
+        <p><strong>Event Theme/Colors:</strong> _________________________________</p>
+        <p><strong>Host Contact Name:</strong> _________________________________</p>
+        <p><strong>Email:</strong> _________________________________</p>
+        <p><strong>Phone:</strong> _________________________________</p>
+    </div>
+
+    <h1>Guest List Tracker</h1>
+    <div class="notes-section" style="min-height: 250px;">
+        <p style="color: #999; font-style: italic;">Track RSVPs and dietary restrictions...</p>
+    </div>
+
+    <h1>Event Timeline</h1>
+    <div class="notes-section">
+        <p><strong>5:00 PM</strong> - Venue access for setup</p>
+        <p><strong>6:00 PM</strong> - Guests arrive / Cocktail hour begins</p>
+        <p><strong>7:00 PM</strong> - Dinner service starts</p>
+        <p><strong>8:00 PM</strong> - Toasts and speeches</p>
+        <p><strong>8:30 PM</strong> - Cake cutting</p>
+        <p><strong>9:00 PM</strong> - Dancing begins</p>
+        <p><strong>11:00 PM</strong> - Event concludes</p>
+        <p style="margin-top: 15px; color: #999; font-style: italic;">Customize this timeline for your event...</p>
+    </div>
+
+    <h1>Notes & Special Requests</h1>
+    <div class="notes-section" style="min-height: 300px;">
+        <p style="color: #999; font-style: italic;">Use this space for additional notes, special requirements, or creative ideas...</p>
+    </div>
+
+    <div class="footer">
+        <p><strong>Marina Convention Center & Casino</strong></p>
+        <p>123 Marina Boulevard | City, State 12345</p>
+        <p>social@marinaconvention.com | +1 (555) 123-4567</p>
+        <p style="margin-top: 15px; font-style: italic;">Let's create memories that last a lifetime!</p>
+    </div>
+</body>
+</html>

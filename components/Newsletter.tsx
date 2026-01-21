@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, CheckCircle } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Newsletter() {
   const [email, setEmail] = useState('');
@@ -24,43 +25,63 @@ export default function Newsletter() {
               <Mail className="mr-4" /> Newsletter Signup
             </div>
           </div>
-          
-          <div className="md:w-1/2 w-full">
-            {submitted ? (
-              <div className="bg-[#0f172a] text-white p-10 text-center border-4 border-white shadow-[10px_10px_0px_rgba(255,255,255,0.2)]">
-                <CheckCircle size={48} className="mx-auto mb-4 text-yellow-500" />
-                <h4 className="text-2xl font-black uppercase">You&apos;re In</h4>
-                <p className="text-zinc-400 mt-2">Watch your inbox for {role} updates.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <select 
-                    className="w-full bg-[#0f172a] text-white border-none p-4 font-bold uppercase tracking-wide focus:ring-2 focus:ring-white"
-                    value={role}
-                    onChange={(e) => setRole(e.target.value)}
+
+          <div className="md:w-1/2 w-full h-[320px] flex items-center">
+            <AnimatePresence mode="wait">
+              {submitted ? (
+                <motion.div
+                  key="success"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  transition={{ type: "spring" }}
+                  className="bg-[#0f172a] text-white p-10 text-center border-4 border-white shadow-[10px_10px_0px_rgba(255,255,255,0.2)] w-full"
+                >
+                  <CheckCircle size={48} className="mx-auto mb-4 text-yellow-500" />
+                  <h4 className="text-2xl font-black uppercase">You&apos;re In</h4>
+                  <p className="text-zinc-400 mt-2">Watch your inbox for {role} updates.</p>
+                </motion.div>
+              ) : (
+                <motion.form
+                  key="form"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  onSubmit={handleSubmit}
+                  className="space-y-4 w-full"
+                >
+                  <div>
+                    <select
+                      className="w-full bg-[#0f172a] text-white border-none p-4 font-bold uppercase tracking-wide focus:ring-2 focus:ring-white"
+                      value={role}
+                      onChange={(e) => setRole(e.target.value)}
+                    >
+                      <option>Event Planner</option>
+                      <option>Wedding Planner</option>
+                      <option>Corporate Marketer</option>
+                      <option>Casino Enthusiast</option>
+                    </select>
+                  </div>
+                  <div>
+                    <input
+                      type="email"
+                      required
+                      className="w-full bg-white text-[#0f172a] placeholder-zinc-500 border-none p-4 font-bold uppercase tracking-wide focus:ring-2 focus:ring-[#0f172a]"
+                      placeholder="EMAIL ADDRESS"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </div>
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full bg-[#0f172a] hover:bg-[#1e293b] text-white font-black py-5 uppercase tracking-[0.2em] transition shadow-[5px_5px_0px_rgba(255,255,255,0.3)]"
                   >
-                    <option>Event Planner</option>
-                    <option>Wedding Planner</option>
-                    <option>Corporate Marketer</option>
-                    <option>Casino Enthusiast</option>
-                  </select>
-                </div>
-                <div>
-                  <input 
-                    type="email" 
-                    required 
-                    className="w-full bg-white text-[#0f172a] placeholder-zinc-500 border-none p-4 font-bold uppercase tracking-wide focus:ring-2 focus:ring-[#0f172a]"
-                    placeholder="EMAIL ADDRESS"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-                <button className="w-full bg-[#0f172a] hover:bg-[#1e293b] text-white font-black py-5 uppercase tracking-[0.2em] transition shadow-[5px_5px_0px_rgba(255,255,255,0.3)]">
-                  Subscribe
-                </button>
-              </form>
-            )}
+                    Subscribe
+                  </motion.button>
+                </motion.form>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>

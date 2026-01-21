@@ -4,7 +4,15 @@
 
 @layer base {
     body {
-        @apply bg-[#fafaf9] text-[#1a1a1a] antialiased;
+        @apply bg-[#1a1a1a] text-white antialiased;
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
     }
 }
 
@@ -25,6 +33,7 @@
     from {
         transform: translateX(-100%);
     }
+
     to {
         transform: translateX(0);
     }
@@ -35,18 +44,24 @@
 }
 
 @keyframes sway {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: rotate(-2deg);
     }
+
     50% {
         transform: rotate(2deg);
     }
 }
 
 @keyframes wave {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(0) scaleX(1);
     }
+
     50% {
         transform: translateX(-5px) scaleX(1.05);
     }
