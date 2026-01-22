@@ -18,23 +18,25 @@ function PitchPresentationPage() {
     { label: "Brand Visibility", value: 90, color: "#f0c242" },
   ];
 
-  <motion.section
-    id={id}
-    className="min-h-screen flex items-center justify-center p-4 md:p-8 bg-cover bg-center relative"
-    initial={{ opacity: 0, y: 50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8, ease: "easeOut" }}
-  >
-    <div className="absolute inset-0 bg-black opacity-60"></div>
-    <div className="relative z-10 max-w-4xl text-center w-full">
-      <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-white mb-6 leading-tight">
-        {title}
-      </h2>
-      <div className="text-lg md:text-xl text-zinc-300 mb-8">
-        {children}
+  const Section = useCallback(({ id, title, children }: { id: string; title: string; children: React.ReactNode }) => (
+    <motion.section
+      id={id}
+      className="min-h-screen flex items-center justify-center p-4 md:p-8 bg-cover bg-center relative"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      <div className="absolute inset-0 bg-black opacity-60"></div>
+      <div className="relative z-10 max-w-4xl text-center w-full">
+        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-white mb-6 leading-tight">
+          {title}
+        </h2>
+        <div className="text-lg md:text-xl text-zinc-300 mb-8">
+          {children}
+        </div>
       </div>
-    </div>
-  </motion.section>
+    </motion.section>
+  ), []);
 
   return (
     <div className="font-sans min-h-screen flex flex-col bg-[#1a1a1a] text-white selection:bg-[#d4af37] selection:text-white">

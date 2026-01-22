@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marina Ecosystem Proposal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0;
+            border-bottom: 1px solid #333;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .sublogo {
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        .section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 120px;
+            align-items: center;
+        }
+
+        .content-col {
+            padding-right: 20px;
+        }
+
+        .index-label {
+            font-family: monospace;
+            color: #d4af37;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #888;
+            margin: 0 0 30px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .stat-block {
+            border-left: 4px solid #d4af37;
+            padding-left: 20px;
+            margin-top: 40px;
+        }
+
+        .stat-value {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+        }
+
+        .image-col img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            filter: grayscale(100%) contrast(120%);
+            transition: filter 0.3s;
+        }
+
+        .image-col img:hover {
+            filter: grayscale(0%) contrast(100%);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            color: #ccc;
+        }
+
+        li::before {
+            content: "•";
+            color: #d4af37;
+            position: absolute;
+            left: 0;
+        }
+
+        .contact-card {
+            background: #1a1a1a;
+            padding: 30px;
+            border: 1px solid #333;
+            margin-top: 40px;
+        }
+
+        .cta-button {
+            background: #d4af37;
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            font-weight: 900;
+            text-transform: uppercase;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        @media print {
+            body {
+                background: #fff;
+                color: #000;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+            h2, .stat-value {
+                color: #000;
+            }
+            p, li {
+                color: #333;
+            }
+            .image-col img {
+                filter: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">MARINA</div>
+            <div class="sublogo">Convention Center & Casino</div>
+            <p style="margin-top: 20px; color: #666;">THE DIGITAL ECOSYSTEM PROPOSAL</p>
+        </header>
+
+        <!-- Section 1 -->
+        <div class="section">
+            <div class="content-col">
+                <div class="index-label">01 // PRESTIGE</div>
+                <h2>THE COLD HARD TRUTH</h2>
+                <h3>THE VISIBILITY GAP</h3>
+                <p>International NGOs and regional corporations are searching for Harare centers right now. If your digital touchpoint lacks prestige, you aren’t just losing clicks—you’re losing 7-figure contracts. We bridge the gap between your 5-star physical lobby and your 2-star digital presence.</p>
+                <div class="stat-block">
+                    <div class="stat-value">92%</div>
+                    <div class="stat-label">OF B2B BUYERS START ONLINE</div>
+                </div>
+            </div>
+            <div class="image-col">
+                <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1200" alt="Prestige">
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section">
+            <div class="content-col">
+                <div class="index-label">02 // EFFICIENCY</div>
+                <h2>THE RESOURCE DRAIN</h2>
+                <h3>AUTOMATION VS. MANUAL SOURCING</h3>
+                <p>Your sales team is stuck answering repetitive FAQs about seating and menus. This manual cycle is a revenue bottleneck. Our "Digital Concierge" automates these answers, freeing your elite staff to hunt high-value accounts.</p>
+                <div class="stat-block">
+                    <div class="stat-value">40%</div>
+                    <div class="stat-label">FASTER PLANNER WORKFLOW</div>
+                </div>
+            </div>
+            <div class="image-col">
+                <img src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&q=80&w=1200" alt="Efficiency">
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section">
+            <div class="content-col">
+                <div class="index-label">03 // ECOSYSTEM</div>
+                <h2>THE SERVICE STACK</h2>
+                <h3>OUR MULTI-REVENUE HOOKS</h3>
+                <p>We provide a comprehensive reputation and lead-gen engine. This isn’t a website; it’s a growth ecosystem designed for the May landmark event and beyond.</p>
+                <ul>
+                    <li>LinkedIn: B2B Authority for MICE Revenue</li>
+                    <li>Instagram: Lifestyle & Casino Vibe Curation</li>
+                    <li>SEO: Domination of "Harare Convention Center" results</li>
+                    <li>Lead Engine: Strategic Data-Capture Points</li>
+                </ul>
+                <div class="stat-block">
+                    <div class="stat-value">85%</div>
+                    <div class="stat-label">INFRASTRUCTURE BUILT</div>
+                </div>
+            </div>
+            <div class="image-col">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200" alt="Ecosystem">
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="section">
+            <div class="content-col">
+                <div class="index-label">04 // OPERATIONS</div>
+                <h2>THE 40% SHORTCUT</h2>
+                <h3>PROFESSIONAL PLANNER KITS</h3>
+                <p>We deliver six downloadable resources (Floor plans, AV specs, Menu kits) that make Marina the easiest venue to work with. We remove the friction that causes wedding planners and corporate execs to go elsewhere.</p>
+                <div class="stat-block">
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">READY-TO-USE ASSETS</div>
+                </div>
+            </div>
+            <div class="image-col">
+                <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200" alt="Operations">
+            </div>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="section">
+            <div class="content-col">
+                <div class="index-label">05 // GROWTH</div>
+                <h2>COLD-TO-GOLD OUTREACH</h2>
+                <h3>STRATEGIC AMPLIFICATION</h3>
+                <p>For the May Event, we leverage our 4,000+ LinkedIn network and "Skin in the Game" marketing support. We don't just design; we drive high-intent traffic to your doors.</p>
+                <div class="stat-block">
+                    <div class="stat-value">4k+</div>
+                    <div class="stat-label">NETWORK REACH</div>
+                </div>
+            </div>
+            <div class="image-col">
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1200" alt="Growth">
+            </div>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="section">
+            <div class="content-col">
+                <div class="index-label">06 // ACTIVATE</div>
+                <h2>LAUNCH THE ECOSYSTEM</h2>
+                <h3>OPTION B: THE FUTURE</h3>
+                <p>Stop manual lead generation. Activate a high-performance system that reflects your true value. The ecosystem is waiting. Let’s launch.</p>
+                <div class="contact-card">
+                    <p><strong>READY FOR DEPLOYMENT</strong></p>
+                    <p>WhatsApp: +263 71 233 1463</p>
+                    <p>Email: mkanakabailey@gmail.com</p>
+                </div>
+            </div>
+            <div class="image-col">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200" alt="Activate">
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
